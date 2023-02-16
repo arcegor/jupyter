@@ -1,0 +1,11 @@
+[Unit]
+Description=JupyterHub
+After=syslog.target network.target
+
+[Service]
+User=root
+Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/egor/jupyter/virtual/jupyter/bin"
+ExecStart=/home/egor/jupyter/virtual/jupyter/bin/jupyterhub
+
+[Install]
+WantedBy=multi-user.target
