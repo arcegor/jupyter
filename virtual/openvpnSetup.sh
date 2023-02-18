@@ -22,13 +22,13 @@ sudo ./easyrsa sign-req server myservername
 
 cp pki/dh.pem pki/ca.crt pki/issued/myservername.crt pki/private/myservername.key /etc/openvpn/
 
-sudo ./easyrsa gen-req myclient1 nopass
+sudo ./easyrsa gen-req myclient nopass
 
 sudo ./easyrsa sign-req client myclient1
 
-pki/ca.crt
+sudo pki/ca.crt
 
-pki/issued/myclient1.crt
+sudo pki/issued/myclient1.crt
 
 sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/myserver.conf.gz
 
